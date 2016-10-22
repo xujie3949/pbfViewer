@@ -1,18 +1,18 @@
 {
-  "name": "pdfViewer",
-  "version": "0.0.0",
+  "name": "pbfViewer",
+  "version": "1.0.1",
   "private": true,
   "scripts": {
     "clean": "shx rm -rf ./dist",
     "compile": "npm run clean && babel src -d dist -D",
     "test": "cross-env NODE_ENV=test nyc mocha --require babel-register ./tests/*.spec.js",
-    "run": "babel-node ./src/pdfViewer.js -h",
+    "run": "babel-node ./src/pbfViewer.js -h",
     "lint": "eslint ./src ./tests",
     "lint:fix": "npm run lint -- --fix",
     "coverage": "nyc report"
   },
   "bin": {
-    "nodecli": "./dist/pdfViewer.js"
+    "nodecli": "./dist/pbfViewer.js"
   },
   "dependencies": {
     "debug": "~2.2.0",

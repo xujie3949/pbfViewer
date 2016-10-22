@@ -2,6 +2,6 @@
 
 import createArgv from './createArgv';
 
-const argv = createArgv();
+const argv = createArgv(process.argv);
 
 console.log('hello ', argv.n);
