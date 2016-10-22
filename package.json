@@ -1,0 +1,53 @@
+{
+  "name": "pdfViewer",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "clean": "shx rm -rf ./dist",
+    "compile": "npm run clean && babel src -d dist -D",
+    "test": "cross-env NODE_ENV=test nyc mocha --require babel-register ./tests/*.spec.js",
+    "run": "babel-node ./src/pdfViewer.js -h",
+    "lint": "eslint ./src ./tests",
+    "lint:fix": "npm run lint -- --fix",
+    "coverage": "nyc report"
+  },
+  "bin": {
+    "nodecli": "./dist/pdfViewer.js"
+  },
+  "dependencies": {
+    "debug": "~2.2.0",
+    "yargs": "^6.3.0",
+    "shx": "^0.1.4"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.16.0",
+    "babel-core": "^6.17.0",
+    "babel-eslint": "^6.1.2",
+    "babel-plugin-istanbul": "^2.0.3",
+    "babel-plugin-rewire": "^1.0.0",
+    "babel-plugin-transform-runtime": "^6.15.0",
+    "babel-preset-es2015": "^6.14.0",
+    "babel-preset-stage-3": "^6.5.0",
+    "babel-register": "^6.16.3",
+    "babel-rewire-wrapper": "^1.0.2",
+    "babel-runtime": "^6.11.6",
+    "chai": "^3.4.1",
+    "chai-as-promised": "^5.3.0",
+    "cheerio": "^0.20.0",
+    "codecov": "^1.0.1",
+    "cross-env": "^3.1.3",
+    "eslint": "^3.4.0",
+    "eslint-config-airbnb-base": "^9.0.0",
+    "eslint-plugin-import": "^2.0.1",
+    "karma": "^1.0.0",
+    "karma-coverage": "^1.0.0",
+    "karma-mocha": "^1.0.1",
+    "karma-mocha-reporter": "^2.0.0",
+    "karma-phantomjs-launcher": "^1.0.2",
+    "mocha": "^3.0.1",
+    "nyc": "^8.3.2",
+    "sinon": "^1.17.5",
+    "sinon-chai": "^2.8.0",
+    "transform-loader": "^0.2.3"
+  }
+}

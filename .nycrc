@@ -1,0 +1,17 @@
+{
+    "include": [
+      "./src/**/*.js"
+    ],
+    "exclude": [
+      "./tests/testHelper.js",
+      "./tests/*.spec.js"
+    ],
+    "reporter": [
+      "lcov",
+      "text"
+    ],
+    "require": [
+      "babel-register"
+    ],
+    "report-dir": "coverage"
+}
